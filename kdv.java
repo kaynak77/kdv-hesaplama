@@ -1,29 +1,18 @@
-     import java'yı içe aktar kullanışlı _ tarayıcı ;
+genel sınıf Ana { genel statik geçersiz ana (Dize[] args) {
 
-genel  sınıf  ÜçgenAlanHesaplama {
-    genel  statik  geçersiz  ana ( String [] args ) {
-        Tarayıcı  taraması = yeni  Tarayıcı ( System . in );
+    double tutar, kdvOran, kdvTutar, kdvliTutar;
 
-        sistem . dışarı _ yazdır ( "1. Kenar: " );
-        int  k1 = tarama . nextInt ();
+    Scanner input = new Scanner(System.in);
+    System.out.print("Ücret Tutarını Giriniz : ");
+    tutar = input.nextDouble();
 
-        sistem . dışarı _ print ( "2. Kenar: " );
-        int  k2 = tarama . nextInt ();
+    kdvOran = (tutar>0) && (tutar<=1000) ? 0.18 : 0.08;
 
-        çift  ​​hipo = Matematik . sqrt ( k1 * k1 + k2 * k2 );
-        sistem . dışarı _ println ( "Hipotenüs: " + hipo );
-        
-        çift  ​​u = ( k1 + k2 + hipo ) / 2 ;
-        çift  ​​alan = Matematik . sqrt ( u * ( u - k1 ) * ( u - k2 ) * ( u - hipo ));
+    kdvTutar = tutar * kdvOran;
+    kdvliTutar = tutar + kdvTutar;
 
-        sistem . dışarı _ printf ( "Alan:%.1f" , alan );
-
-        taramak _ kapat ();
-    }
+    System.out.println("KDV'siz Tutar : " + tutar);
+    System.out.println("KDV Oranı : " + kdvOran);
+    System.out.println("KDV Tutarı : " + kdvTutar);
+    System.out.println("KDV'li Tutar : " + kdvliTutar);
 }
-
-
-
-     }
-       
-     }
